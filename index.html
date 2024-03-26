@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+    <script>
+        // 页面加载时生成随机数
+        function generateRandomNumber() {
+            var randomNumber = Math.floor(Math.random() * 10000); // 生成0到10000之间的随机整数作为id
+            var jsonData = {
+                "code": 0,
+                "data": {
+                    "id": randomNumber,
+                    "name": "number"
+                }
+            }; // 以JSON格式组装数据
+            var outputElement = document.getElementById("output");
+            outputElement.textContent = JSON.stringify(jsonData); // 将JSON数据输出到页面
+        }
+        
+        // 页面加载时调用生成随机数函数
+        window.onload = generateRandomNumber;
+    </script>
+</head>
+<body>
+    <pre id="output"></pre>
+</body>
+</html>
