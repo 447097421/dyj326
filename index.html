@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <script>
+        // 生成随机数函数
+        function generateRandomNumber() {
+            var randomNumber = Math.floor(Math.random() * 11); // 生成0到10之间的随机整数
+            var outputElement = document.getElementById("output");
+            outputElement.textContent = "Random Number: " + randomNumber;
+        }
+
+        // 每隔一秒生成一个随机数
+        setInterval(generateRandomNumber, 1000);
+    </script>
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <div id="output">Random Number:</div>
+</body>
+</html>
